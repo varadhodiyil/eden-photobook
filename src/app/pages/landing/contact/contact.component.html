@@ -1,5 +1,11 @@
-<div class="map_wrapper">
-  <div id="map"></div>
+<div *ngIf="apiLoaded | async">
+  <google-map height="400px" width="100vw" [center]="center">
+    <map-marker
+      *ngFor="let markerPosition of markerPositions"
+      [position]="markerPosition"
+      [options]="markerOptions"
+    ></map-marker>
+  </google-map>
 </div>
 <div class="booking_table_wrapper contact_top_wrapper dm_cover">
   <div class="container">

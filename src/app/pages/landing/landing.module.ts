@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 const routes: Routes = [
   {
@@ -51,6 +52,9 @@ export class LandingRoutingModule {}
     CommonModule,
     // LandingRoutingModule,
     RouterModule,
+    GoogleMapsModule,
   ],
+  exports: [ContactComponent],
+  providers: [],
 })
 export class LandingModule {}
